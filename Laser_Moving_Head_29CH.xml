@@ -1,241 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
-  <Info datetime="2026-08-26T12:00:00" showfile="Laser Moving Head 29CH" />
-  <FixtureType index="0" mode_dependencies="false" name="Laser Moving Head 29CH" short_name="LASER29" manufacturer_name="Generic Laser" manufacturer_short_name="Generic" mode_master_dmx_offset="0" has_manufacturer_table="false">
-    <short_name>LASER29</short_name>
-    <Modules>
-      <Module index="0" name="Laser Head" class="Head" width="0.300000" height="0.400000" depth="0.300000">
-        <Body index="0" />
-        <Beam index="0" beamtype="Other" beam_angle="10.000000" beam_intensity="1000.000000" />
-      </Module>
-    </Modules>
-    <Modes>
-      <Mode index="0" name="29CH STD">
-        <SubFixture index="0" />
-        <DMXChannels>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
+	<FixtureType name="Laser Moving Head 29CH" mode="00">
+		<InfoItems>
+			<Info type="Revision" date="2026-08-26">Laser moving head, STD 29CH mode, built from manufacturer DMX chart</Info>
+		</InfoItems>
+		<short_name>LASER29</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules>
+			<Module name="Main Module" class="Head" beamtype="Other" beam_angle="10" beam_intensity="1000">
 
-          <!-- CH1/CH2  Pan (X-axis) 16-bit -->
-          <DMXChannel index="0" attribute="PAN" feature="Position.PanTilt" preset="Position" coarse="1" fine="2" dmx_default="32768" highlight="65535" geometry="Base">
-            <ChannelFunction index="0" from="0" to="65535" min_val="0.000000" max_val="540.000000" physunit="Angle">
-              <ChannelSet name="Pan" from="0" to="65535" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH1/CH2  X-axis (Pan) 16-bit -->
+				<ChannelType attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="2" highlight_value="128">
+					<ChannelFunction from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" />
+				</ChannelType>
 
-          <!-- CH3/CH4  Tilt (Y-axis) 16-bit -->
-          <DMXChannel index="1" attribute="TILT" feature="Position.PanTilt" preset="Position" coarse="3" fine="4" dmx_default="32768" highlight="65535" geometry="Base">
-            <ChannelFunction index="0" from="0" to="65535" min_val="0.000000" max_val="270.000000" physunit="Angle">
-              <ChannelSet name="Tilt" from="0" to="65535" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH3/CH4  Y-axis (Tilt) 16-bit -->
+				<ChannelType attribute="TILT" feature="POSITION" preset="POSITION" coarse="3" fine="4" highlight_value="128">
+					<ChannelFunction from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="-135" physto="135" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" />
+				</ChannelType>
 
-          <!-- CH5  Pan/Tilt movement speed (X/Y speed) -->
-          <DMXChannel index="2" attribute="PT SPEED" feature="Position.PanTilt" preset="Position" coarse="5" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Max Speed" from="0" to="0" />
-              <ChannelSet name="Fast..Slow" from="1" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH5  X/Y movement speed -->
+				<ChannelType attribute="PT_SPEED" feature="POSITION" preset="POSITION" coarse="5">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="PT_SPEED" attribute="PT_SPEED" feature="POSITION" preset="POSITION">
+						<ChannelSet name="Max speed" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Fast..Slow" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH6  Head system reset -->
-          <DMXChannel index="3" attribute="RESET" feature="Control.Control" preset="Control" coarse="6" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="No function" from="0" to="250" />
-              <ChannelSet name="Reset (3s delay)" from="251" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH6  Head system reset -->
+				<ChannelType attribute="RESET" feature="CONTROL" preset="CONTROL" coarse="6">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RESET" attribute="RESET" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="No function" from_dmx="0" to_dmx="250" />
+						<ChannelSet name="Reset (3s delay)" from_dmx="251" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH7  Switching lights / Dimmer -->
-          <DMXChannel index="4" attribute="DIM" feature="Dimmer.Dimmer" preset="Dimmer" coarse="7" dmx_default="255" highlight="255" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Lights off" from="0" to="0" />
-              <ChannelSet name="Brightness 1..100%" from="1" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH7  Switching lights / dimmer -->
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="7" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="Lights off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Brightness 1..100%" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH8  Auto effect speed / voice sensitivity -->
-          <DMXChannel index="5" attribute="EFFECT SPEED" feature="Effect.Effect" preset="Effect" coarse="8" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Default auto speed" from="0" to="26" />
-              <ChannelSet name="Auto speed slow..fast" from="27" to="127" />
-              <ChannelSet name="Voice sensitivity" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH8  Auto effect speed / voice sensitivity -->
+				<ChannelType attribute="EFFECTSPEED" feature="CONTROL" preset="CONTROL" coarse="8">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="EFFECTSPEED" attribute="EFFECTSPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Default auto speed" from_dmx="0" to_dmx="26" />
+						<ChannelSet name="Auto slow..fast" from_dmx="27" to_dmx="127" />
+						<ChannelSet name="Voice sensitivity" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH9  Pattern group / Effect group -->
-          <DMXChannel index="6" attribute="GOBO1" feature="Gobo.Gobo" preset="Gobo" coarse="9" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Pattern group (per 16)" from="0" to="127" />
-              <ChannelSet name="Effect group (per 16)" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH9  Pattern group / Effect group -->
+				<ChannelType attribute="GOBO1" feature="GOBO" preset="GOBO" coarse="9">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GOBO1" attribute="GOBO1" feature="GOBO" preset="GOBO">
+						<ChannelSet name="Pattern group (per 16)" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Effect group (per 16)" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH10  Pattern selection / Effect selection -->
-          <DMXChannel index="7" attribute="GOBO2" feature="Gobo.Gobo" preset="Gobo" coarse="10" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Pattern select (per 5) / Effect: 0-1 all, then per 2" from="0" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH10  Pattern / Effect selection -->
+				<ChannelType attribute="GOBO2" feature="GOBO" preset="GOBO" coarse="10">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GOBO2" attribute="GOBO2" feature="GOBO" preset="GOBO">
+						<ChannelSet name="Pattern / Effect select" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH11  Strobe -->
-          <DMXChannel index="8" attribute="STROBE" feature="Beam.Beam" preset="Shutter" coarse="11" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Open" from="0" to="0" />
-              <ChannelSet name="Strobe slow..fast" from="1" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH11  Strobe -->
+				<ChannelType attribute="SHUTTER" feature="BEAM" preset="BEAM" coarse="11">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="SHUTTER" attribute="SHUTTER" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH12  Pattern size (large..small) -->
-          <DMXChannel index="9" attribute="ZOOM" feature="Beam.Beam" preset="Zoom" coarse="12" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Pattern size large..small" from="0" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH12  Pattern size (large..small) -->
+				<ChannelType attribute="ZOOM" feature="BEAM" preset="BEAM" coarse="12">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="ZOOM" attribute="ZOOM" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Size large..small" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH13  Horizontal position MSB (128 = centre) -->
-          <DMXChannel index="10" attribute="XYZ_X" feature="Position.PanTilt" preset="Position" coarse="13" dmx_default="128" highlight="128" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Left (light off outside)" from="0" to="127" />
-              <ChannelSet name="Centre" from="128" to="128" />
-              <ChannelSet name="Right (light off outside)" from="129" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH13  Horizontal position (128 = centre) -->
+				<ChannelType attribute="H_POSITION" feature="POSITION" preset="POSITION" coarse="13" highlight_value="128">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="H_POSITION" attribute="H_POSITION" feature="POSITION" preset="POSITION">
+						<ChannelSet name="Left (off outside)" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Centre" from_dmx="128" to_dmx="128" />
+						<ChannelSet name="Right (off outside)" from_dmx="129" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH14  Vertical position MSB (128 = centre) -->
-          <DMXChannel index="11" attribute="XYZ_Y" feature="Position.PanTilt" preset="Position" coarse="14" dmx_default="128" highlight="128" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Down (light off outside)" from="0" to="127" />
-              <ChannelSet name="Centre" from="128" to="128" />
-              <ChannelSet name="Up (light off outside)" from="129" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH14  Vertical position (128 = centre) -->
+				<ChannelType attribute="V_POSITION" feature="POSITION" preset="POSITION" coarse="14" highlight_value="128">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="V_POSITION" attribute="V_POSITION" feature="POSITION" preset="POSITION">
+						<ChannelSet name="Down (off outside)" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Centre" from_dmx="128" to_dmx="128" />
+						<ChannelSet name="Up (off outside)" from_dmx="129" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH15  Colour -->
-          <DMXChannel index="12" attribute="COLOR1" feature="Color.Color" preset="Color" coarse="15" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Original colour" from="0" to="3" />
-              <ChannelSet name="Fixed colour (per 4)" from="4" to="31" />
-              <ChannelSet name="Rainbow colour change" from="32" to="35" />
-              <ChannelSet name="R/G/B colour change" from="36" to="39" />
-              <ChannelSet name="Colour change" from="40" to="43" />
-              <ChannelSet name="Flow effects (per 4)" from="44" to="239" />
-              <ChannelSet name="Gradual drawing" from="240" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH15  Colour -->
+				<ChannelType attribute="COLOR1" feature="COLOR" preset="COLOR" coarse="15">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLOR1" attribute="COLOR1" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Original colour" from_dmx="0" to_dmx="3" />
+						<ChannelSet name="Fixed colour (per 4)" from_dmx="4" to_dmx="31" />
+						<ChannelSet name="Rainbow change" from_dmx="32" to_dmx="35" />
+						<ChannelSet name="R/G/B change" from_dmx="36" to_dmx="39" />
+						<ChannelSet name="Colour change" from_dmx="40" to_dmx="43" />
+						<ChannelSet name="Flow effects (per 4)" from_dmx="44" to_dmx="239" />
+						<ChannelSet name="Gradual drawing" from_dmx="240" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH16  Colour speed -->
-          <DMXChannel index="13" attribute="COLOR SPEED" feature="Color.Color" preset="Color" coarse="16" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Colour speed off" from="0" to="3" />
-              <ChannelSet name="Slow..fast (positive)" from="4" to="127" />
-              <ChannelSet name="Slow..fast (reversed)" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH16  Colour speed -->
+				<ChannelType attribute="COLORSPEED" feature="COLOR" preset="COLOR" coarse="16">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORSPEED" attribute="COLORSPEED" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Speed off" from_dmx="0" to_dmx="3" />
+						<ChannelSet name="Slow..fast (positive)" from_dmx="4" to_dmx="127" />
+						<ChannelSet name="Slow..fast (reversed)" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH17  Pattern line / point scan -->
-          <DMXChannel index="14" attribute="EFFECT" feature="Beam.Beam" preset="Beam" coarse="17" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Highlight line scan speed" from="0" to="63" />
-              <ChannelSet name="Line scan speed" from="64" to="127" />
-              <ChannelSet name="Point scan speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH17  Pattern line / point scan -->
+				<ChannelType attribute="PATTERNLINE" feature="BEAM" preset="BEAM" coarse="17">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="PATTERNLINE" attribute="PATTERNLINE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Highlight line scan" from_dmx="0" to_dmx="63" />
+						<ChannelSet name="Line scan" from_dmx="64" to_dmx="127" />
+						<ChannelSet name="Point scan" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH18  Rotate Z (angle / speed) -->
-          <DMXChannel index="15" attribute="GOBO1_POS" feature="Gobo.Gobo" preset="Gobo" coarse="18" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="360.000000" physunit="Angle">
-              <ChannelSet name="Rotate Z angle" from="0" to="127" />
-              <ChannelSet name="Rotate Z speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH18  Rotate Z (angle / speed) -->
+				<ChannelType attribute="GOBO1_POS" feature="GOBO" preset="GOBO" coarse="18">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GOBO1_POS" attribute="GOBO1_POS" feature="GOBO" preset="GOBO">
+						<ChannelSet name="Rotate Z angle" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Rotate Z speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH19  Rotate X (angle / speed) -->
-          <DMXChannel index="16" attribute="GOBO2_POS" feature="Gobo.Gobo" preset="Gobo" coarse="19" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="360.000000" physunit="Angle">
-              <ChannelSet name="Rotate X angle" from="0" to="127" />
-              <ChannelSet name="Rotate X speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH19  Rotate X (angle / speed) -->
+				<ChannelType attribute="GOBO2_POS" feature="GOBO" preset="GOBO" coarse="19">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GOBO2_POS" attribute="GOBO2_POS" feature="GOBO" preset="GOBO">
+						<ChannelSet name="Rotate X angle" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Rotate X speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH20  Rotate Y (angle / speed) -->
-          <DMXChannel index="17" attribute="GOBO3_POS" feature="Gobo.Gobo" preset="Gobo" coarse="20" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="360.000000" physunit="Angle">
-              <ChannelSet name="Rotate Y angle" from="0" to="127" />
-              <ChannelSet name="Rotate Y speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH20  Rotate Y (angle / speed) -->
+				<ChannelType attribute="GOBO3_POS" feature="GOBO" preset="GOBO" coarse="20">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GOBO3_POS" attribute="GOBO3_POS" feature="GOBO" preset="GOBO">
+						<ChannelSet name="Rotate Y angle" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Rotate Y speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH21  Horizontal movement (position / speed) -->
-          <DMXChannel index="18" attribute="EFFECT2" feature="Effect.Effect" preset="Effect" coarse="21" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Horizontal movement position" from="0" to="127" />
-              <ChannelSet name="Horizontal movement speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH21  Horizontal movement (position / speed) -->
+				<ChannelType attribute="H_MOVE" feature="CONTROL" preset="CONTROL" coarse="21">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="H_MOVE" attribute="H_MOVE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Movement position" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Movement speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH22  Vertical movement (position / speed) -->
-          <DMXChannel index="19" attribute="EFFECT3" feature="Effect.Effect" preset="Effect" coarse="22" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Vertical movement position" from="0" to="127" />
-              <ChannelSet name="Vertical movement speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH22  Vertical movement (position / speed) -->
+				<ChannelType attribute="V_MOVE" feature="CONTROL" preset="CONTROL" coarse="22">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="V_MOVE" attribute="V_MOVE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Movement position" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Movement speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH23  Pattern size / Zoom (size + zoom speed) -->
-          <DMXChannel index="20" attribute="ZOOM2" feature="Beam.Beam" preset="Zoom" coarse="23" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Pattern size large..small" from="0" to="127" />
-              <ChannelSet name="Zoom speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH23  Pattern size / Zoom (size + zoom speed) -->
+				<ChannelType attribute="PATTERNZOOM" feature="BEAM" preset="BEAM" coarse="23">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="PATTERNZOOM" attribute="PATTERNZOOM" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Size large..small" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Zoom speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH24  Gradual drawing speed -->
-          <DMXChannel index="21" attribute="EFFECT4" feature="Effect.Effect" preset="Effect" coarse="24" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Off" from="0" to="0" />
-              <ChannelSet name="Gradual drawing speed" from="1" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH24  Gradual drawing speed -->
+				<ChannelType attribute="GRADUAL" feature="CONTROL" preset="CONTROL" coarse="24">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="GRADUAL" attribute="GRADUAL" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Draw speed" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH25  X / Y waves -->
-          <DMXChannel index="22" attribute="EFFECT5" feature="Effect.Effect" preset="Effect" coarse="25" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="Off" from="0" to="0" />
-              <ChannelSet name="X wave speed" from="1" to="127" />
-              <ChannelSet name="Y wave speed" from="128" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH25  X / Y waves -->
+				<ChannelType attribute="WAVES" feature="CONTROL" preset="CONTROL" coarse="25">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="WAVES" attribute="WAVES" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="X wave speed" from_dmx="1" to_dmx="127" />
+						<ChannelSet name="Y wave speed" from_dmx="128" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH26  LED brightness -->
-          <DMXChannel index="23" attribute="DIM2" feature="Dimmer.Dimmer" preset="Dimmer" coarse="26" dmx_default="0" highlight="255" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="LED brightness 0..100%" from="0" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH26  LED brightness -->
+				<ChannelType attribute="LED_DIM" feature="DIMMER" preset="DIMMER" coarse="26" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="LED_DIM" attribute="LED_DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="LED 0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH27  LED effects -->
-          <DMXChannel index="24" attribute="EFFECT6" feature="Effect.Effect" preset="Effect" coarse="27" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="LED effect select (per 8)" from="0" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH27  LED effects -->
+				<ChannelType attribute="LED_FX" feature="CONTROL" preset="CONTROL" coarse="27">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="LED_FX" attribute="LED_FX" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="LED effect (per 8)" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH28  LED effects speed -->
-          <DMXChannel index="25" attribute="EFFECT7" feature="Effect.Effect" preset="Effect" coarse="28" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="LED effect speed slow..quick" from="0" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH28  LED effects speed -->
+				<ChannelType attribute="LED_FXSPEED" feature="CONTROL" preset="CONTROL" coarse="28">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="LED_FXSPEED" attribute="LED_FXSPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="LED speed slow..quick" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-          <!-- CH29  LED strobe -->
-          <DMXChannel index="26" attribute="STROBE2" feature="Beam.Beam" preset="Shutter" coarse="29" dmx_default="0" highlight="0" geometry="Base">
-            <ChannelFunction index="0" from="0" to="255" min_val="0.000000" max_val="100.000000" physunit="None">
-              <ChannelSet name="LED open" from="0" to="0" />
-              <ChannelSet name="LED strobe slow..fast" from="1" to="255" />
-            </ChannelFunction>
-          </DMXChannel>
+				<!-- CH29  LED strobe -->
+				<ChannelType attribute="LED_STROBE" feature="BEAM" preset="BEAM" coarse="29">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="LED_STROBE" attribute="LED_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="LED open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="LED strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
 
-        </DMXChannels>
-      </Mode>
-    </Modes>
-  </FixtureType>
+			</Module>
+		</Modules>
+		<Instances>
+			<Instance module_index="0" patch="1" locked="true" />
+		</Instances>
+		<Wheels />
+	</FixtureType>
 </MA>

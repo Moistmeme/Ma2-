@@ -6,7 +6,8 @@ built from the manufacturer's DMX-512 channel description.
 - **File:** `Laser_Moving_Head_29CH.xml`
 - **Mode:** `29CH STD`
 - **DMX footprint:** 29 channels (Pan and Tilt are 16-bit, so they use 2 DMX slots each)
-- **Target:** grandMA2 v3.x (onPC or console). The file declares schema `3.9.60`; MA auto-migrates on import.
+- **Target:** grandMA2 (onPC or console). The file uses the native fixture schema `2.8.123`, which imports on both MA2 2.x and 3.x (the desk auto-migrates).
+- **Structure:** each channel is a `<ChannelType>` inside the `<Module>` with its DMX slot as `coarse=` (and `fine=` for 16-bit); a single `<Instance patch="1">` gives the 29-channel footprint. (An earlier draft used a `<Modes>/<DMXChannel>` layout, which MA2 imports with **no DMX footprint** — that has been fixed.)
 
 > The `PRO / 46CH` mode in the manual (dual-pattern function switch) is **not** included — that
 > table is truncated in the source photos. Once the full 46CH list is available it can be added as a
