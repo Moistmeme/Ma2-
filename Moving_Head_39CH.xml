@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
+	<FixtureType name="Moving Head 39CH" mode="39">
+		<InfoItems>
+			<Info type="Revision" date="2026-08-28">RGB+L moving head with inner/outer Aura LED rings, 39CH mode (DMX/ArtNet/sACN), built from manufacturer DMX chart</Info>
+		</InfoItems>
+		<short_name>MH39</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules>
+			<Module name="Main Module" class="Head" beamtype="Wash" beam_angle="15" beam_intensity="6000">
+
+				<!-- CH1/CH2  Pan 16-bit (540 deg) -->
+				<ChannelType attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="2" highlight_value="128">
+					<ChannelFunction from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" />
+				</ChannelType>
+
+				<!-- CH3/CH4  Tilt 16-bit (230 deg) -->
+				<ChannelType attribute="TILT" feature="POSITION" preset="POSITION" coarse="3" fine="4" highlight_value="128">
+					<ChannelFunction from="-115" to="115" min_dmx_24="0" max_dmx_24="16777215" physfrom="-115" physto="115" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" />
+				</ChannelType>
+
+				<!-- CH5  X/Y movement speed (fast..slow) -->
+				<ChannelType attribute="PT_SPEED" feature="POSITION" preset="POSITION" coarse="5">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="PT_SPEED" attribute="PT_SPEED" feature="POSITION" preset="POSITION">
+						<ChannelSet name="Fast..Slow" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH6/CH7  Zoom 16-bit (narrow..wide) -->
+				<ChannelType attribute="ZOOM" feature="BEAM" preset="BEAM" coarse="6" fine="7">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="ZOOM" attribute="ZOOM" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Small..Large angle" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH8/CH9  120W LED Dimmer 16-bit -->
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="8" fine="9" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH10  Strobe -->
+				<ChannelType attribute="SHUTTER" feature="BEAM" preset="BEAM" coarse="10">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="SHUTTER" attribute="SHUTTER" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="5" />
+						<ChannelSet name="Closed" from_dmx="6" to_dmx="10" />
+						<ChannelSet name="Pulse random slow..fast" from_dmx="11" to_dmx="35" />
+						<ChannelSet name="Ramp up random slow..fast" from_dmx="36" to_dmx="60" />
+						<ChannelSet name="Ramp down random slow..fast" from_dmx="61" to_dmx="85" />
+						<ChannelSet name="Random strobe" from_dmx="86" to_dmx="110" />
+						<ChannelSet name="Strobe break effect" from_dmx="111" to_dmx="135" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="136" to_dmx="250" />
+						<ChannelSet name="Open" from_dmx="251" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH11/CH12  Red 16-bit -->
+				<ChannelType attribute="COLORRGB1" feature="COLOR" preset="COLOR" coarse="11" fine="12">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH13/CH14  Green 16-bit -->
+				<ChannelType attribute="COLORRGB2" feature="COLOR" preset="COLOR" coarse="13" fine="14">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH15/CH16  Blue 16-bit -->
+				<ChannelType attribute="COLORRGB3" feature="COLOR" preset="COLOR" coarse="15" fine="16">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH17/CH18  L (White) 16-bit -->
+				<ChannelType attribute="COLORRGB4" feature="COLOR" preset="COLOR" coarse="17" fine="18">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH19  Inner ring Aura dimmer -->
+				<ChannelType attribute="INNER_DIM" feature="DIMMER" preset="DIMMER" coarse="19" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_DIM" attribute="INNER_DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH20  Inner ring Red -->
+				<ChannelType attribute="INNER_R" feature="COLOR" preset="COLOR" coarse="20">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_R" attribute="INNER_R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH21  Inner ring Green -->
+				<ChannelType attribute="INNER_G" feature="COLOR" preset="COLOR" coarse="21">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_G" attribute="INNER_G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH22  Inner ring Blue -->
+				<ChannelType attribute="INNER_B" feature="COLOR" preset="COLOR" coarse="22">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_B" attribute="INNER_B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH23  Inner ring Warm White -->
+				<ChannelType attribute="INNER_WW" feature="COLOR" preset="COLOR" coarse="23">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_WW" attribute="INNER_WW" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH24  Inner ring Strobe -->
+				<ChannelType attribute="INNER_STROBE" feature="BEAM" preset="BEAM" coarse="24">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_STROBE" attribute="INNER_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="5" />
+						<ChannelSet name="Closed" from_dmx="6" to_dmx="10" />
+						<ChannelSet name="Pulse random slow..fast" from_dmx="11" to_dmx="35" />
+						<ChannelSet name="Ramp up random slow..fast" from_dmx="36" to_dmx="60" />
+						<ChannelSet name="Ramp down random slow..fast" from_dmx="61" to_dmx="85" />
+						<ChannelSet name="Random strobe" from_dmx="86" to_dmx="110" />
+						<ChannelSet name="Strobe break effect" from_dmx="111" to_dmx="135" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="136" to_dmx="250" />
+						<ChannelSet name="Open" from_dmx="251" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH25  Outer ring dimmer -->
+				<ChannelType attribute="OUTER_DIM" feature="DIMMER" preset="DIMMER" coarse="25" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_DIM" attribute="OUTER_DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH26  Outer ring Red -->
+				<ChannelType attribute="OUTER_R" feature="COLOR" preset="COLOR" coarse="26">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_R" attribute="OUTER_R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH27  Outer ring Green -->
+				<ChannelType attribute="OUTER_G" feature="COLOR" preset="COLOR" coarse="27">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_G" attribute="OUTER_G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH28  Outer ring Blue -->
+				<ChannelType attribute="OUTER_B" feature="COLOR" preset="COLOR" coarse="28">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_B" attribute="OUTER_B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH29  Outer ring Warm White -->
+				<ChannelType attribute="OUTER_WW" feature="COLOR" preset="COLOR" coarse="29">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_WW" attribute="OUTER_WW" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH30  Outer ring Strobe -->
+				<ChannelType attribute="OUTER_STROBE" feature="BEAM" preset="BEAM" coarse="30">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_STROBE" attribute="OUTER_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="5" />
+						<ChannelSet name="Closed" from_dmx="6" to_dmx="10" />
+						<ChannelSet name="Pulse random slow..fast" from_dmx="11" to_dmx="35" />
+						<ChannelSet name="Ramp up random slow..fast" from_dmx="36" to_dmx="60" />
+						<ChannelSet name="Ramp down random slow..fast" from_dmx="61" to_dmx="85" />
+						<ChannelSet name="Random strobe" from_dmx="86" to_dmx="110" />
+						<ChannelSet name="Strobe break effect" from_dmx="111" to_dmx="135" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="136" to_dmx="250" />
+						<ChannelSet name="Open" from_dmx="251" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH31  CCT (colour temperature) -->
+				<ChannelType attribute="CTC" feature="COLOR" preset="COLOR" coarse="31">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="CTC" attribute="CTC" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="5" />
+						<ChannelSet name="1800K" from_dmx="6" to_dmx="21" />
+						<ChannelSet name="2000K" from_dmx="22" to_dmx="37" />
+						<ChannelSet name="2500K" from_dmx="38" to_dmx="53" />
+						<ChannelSet name="2700K" from_dmx="54" to_dmx="69" />
+						<ChannelSet name="3000K" from_dmx="70" to_dmx="85" />
+						<ChannelSet name="3200K" from_dmx="86" to_dmx="101" />
+						<ChannelSet name="3500K" from_dmx="102" to_dmx="117" />
+						<ChannelSet name="4000K" from_dmx="118" to_dmx="133" />
+						<ChannelSet name="4500K" from_dmx="134" to_dmx="149" />
+						<ChannelSet name="5000K" from_dmx="150" to_dmx="165" />
+						<ChannelSet name="5600K" from_dmx="166" to_dmx="181" />
+						<ChannelSet name="6000K" from_dmx="182" to_dmx="197" />
+						<ChannelSet name="6500K" from_dmx="198" to_dmx="213" />
+						<ChannelSet name="7200K" from_dmx="214" to_dmx="229" />
+						<ChannelSet name="8000K" from_dmx="230" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH32  Tint (Magenta <-> Green) -->
+				<ChannelType attribute="TINT" feature="COLOR" preset="COLOR" coarse="32" highlight_value="128">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="TINT" attribute="TINT" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Magenta..Off" from_dmx="1" to_dmx="127" />
+						<ChannelSet name="Off" from_dmx="128" to_dmx="128" />
+						<ChannelSet name="Off..Green" from_dmx="129" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH33  Colour macros -->
+				<ChannelType attribute="COLORMACRO" feature="COLOR" preset="COLOR" coarse="33">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORMACRO" attribute="COLORMACRO" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="5" />
+						<ChannelSet name="Magenta" from_dmx="6" to_dmx="10" />
+						<ChannelSet name="Peacock Blue" from_dmx="11" to_dmx="15" />
+						<ChannelSet name="Steel Blue" from_dmx="16" to_dmx="20" />
+						<ChannelSet name="Light Blue" from_dmx="21" to_dmx="25" />
+						<ChannelSet name="Dark Blue" from_dmx="26" to_dmx="30" />
+						<ChannelSet name="Leaf Green" from_dmx="31" to_dmx="35" />
+						<ChannelSet name="Dark Green" from_dmx="36" to_dmx="40" />
+						<ChannelSet name="Mauve" from_dmx="41" to_dmx="45" />
+						<ChannelSet name="Deep Golden Amber" from_dmx="46" to_dmx="50" />
+						<ChannelSet name="Pale Lavender" from_dmx="51" to_dmx="55" />
+						<ChannelSet name="Primary Green" from_dmx="56" to_dmx="60" />
+						<ChannelSet name="Bright Blue" from_dmx="61" to_dmx="65" />
+						<ChannelSet name="Apricot" from_dmx="66" to_dmx="70" />
+						<ChannelSet name="Pale Gold" from_dmx="71" to_dmx="75" />
+						<ChannelSet name="Rainbow effect" from_dmx="76" to_dmx="135" />
+						<ChannelSet name="Colour macro jumping" from_dmx="136" to_dmx="194" />
+						<ChannelSet name="Colour macro gradient" from_dmx="195" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH34  Inner ring auxiliary light effect -->
+				<ChannelType attribute="INNER_FX" feature="CONTROL" preset="CONTROL" coarse="34">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_FX" attribute="INNER_FX" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="9" />
+						<ChannelSet name="Effect 1" from_dmx="10" to_dmx="34" />
+						<ChannelSet name="Effect 2" from_dmx="35" to_dmx="59" />
+						<ChannelSet name="Effect 3" from_dmx="60" to_dmx="84" />
+						<ChannelSet name="Effect 4" from_dmx="85" to_dmx="109" />
+						<ChannelSet name="Effect 5" from_dmx="110" to_dmx="134" />
+						<ChannelSet name="Effect 6" from_dmx="135" to_dmx="159" />
+						<ChannelSet name="Effect 7" from_dmx="160" to_dmx="184" />
+						<ChannelSet name="Effect 8" from_dmx="185" to_dmx="209" />
+						<ChannelSet name="Effect 9" from_dmx="210" to_dmx="234" />
+						<ChannelSet name="Effect 10" from_dmx="235" to_dmx="244" />
+						<ChannelSet name="Built-in effect 1-10" from_dmx="245" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH35  Inner ring effect speed -->
+				<ChannelType attribute="INNER_FXSPEED" feature="CONTROL" preset="CONTROL" coarse="35">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="INNER_FXSPEED" attribute="INNER_FXSPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Index" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Stop" from_dmx="128" to_dmx="128" />
+						<ChannelSet name="CW fast..slow" from_dmx="129" to_dmx="191" />
+						<ChannelSet name="Stop" from_dmx="192" to_dmx="192" />
+						<ChannelSet name="CCW slow..fast" from_dmx="193" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH36  Outer ring auxiliary light effect -->
+				<ChannelType attribute="OUTER_FX" feature="CONTROL" preset="CONTROL" coarse="36">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_FX" attribute="OUTER_FX" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="9" />
+						<ChannelSet name="Effect 1" from_dmx="10" to_dmx="34" />
+						<ChannelSet name="Effect 2" from_dmx="35" to_dmx="59" />
+						<ChannelSet name="Effect 3" from_dmx="60" to_dmx="84" />
+						<ChannelSet name="Effect 4" from_dmx="85" to_dmx="109" />
+						<ChannelSet name="Effect 5" from_dmx="110" to_dmx="134" />
+						<ChannelSet name="Effect 6" from_dmx="135" to_dmx="159" />
+						<ChannelSet name="Effect 7" from_dmx="160" to_dmx="184" />
+						<ChannelSet name="Effect 8" from_dmx="185" to_dmx="209" />
+						<ChannelSet name="Effect 9" from_dmx="210" to_dmx="234" />
+						<ChannelSet name="Effect 10" from_dmx="235" to_dmx="244" />
+						<ChannelSet name="Built-in effect 1-10" from_dmx="245" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH37  Outer ring effect speed -->
+				<ChannelType attribute="OUTER_FXSPEED" feature="CONTROL" preset="CONTROL" coarse="37">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="OUTER_FXSPEED" attribute="OUTER_FXSPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Index" from_dmx="0" to_dmx="127" />
+						<ChannelSet name="Stop" from_dmx="128" to_dmx="128" />
+						<ChannelSet name="CW fast..slow" from_dmx="129" to_dmx="191" />
+						<ChannelSet name="Stop" from_dmx="192" to_dmx="192" />
+						<ChannelSet name="CCW slow..fast" from_dmx="193" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH38  Function / settings / reset (hold 3s to apply) -->
+				<ChannelType attribute="FUNCTION" feature="CONTROL" preset="CONTROL" coarse="38">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="FUNCTION" attribute="FUNCTION" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="No function" from_dmx="0" to_dmx="4" />
+						<ChannelSet name="Display stays on" from_dmx="5" to_dmx="9" />
+						<ChannelSet name="Display 10s" from_dmx="10" to_dmx="14" />
+						<ChannelSet name="Display 30s" from_dmx="15" to_dmx="19" />
+						<ChannelSet name="Display 1min" from_dmx="20" to_dmx="24" />
+						<ChannelSet name="Screen lock off" from_dmx="25" to_dmx="29" />
+						<ChannelSet name="Screen lock on" from_dmx="30" to_dmx="34" />
+						<ChannelSet name="Signal hold" from_dmx="35" to_dmx="39" />
+						<ChannelSet name="Black field" from_dmx="40" to_dmx="44" />
+						<ChannelSet name="Standard dimming" from_dmx="60" to_dmx="64" />
+						<ChannelSet name="Fast dimming" from_dmx="65" to_dmx="69" />
+						<ChannelSet name="Slow dimming" from_dmx="70" to_dmx="74" />
+						<ChannelSet name="Linear curve" from_dmx="85" to_dmx="89" />
+						<ChannelSet name="Square curve" from_dmx="90" to_dmx="94" />
+						<ChannelSet name="S-curve" from_dmx="95" to_dmx="99" />
+						<ChannelSet name="4000Hz" from_dmx="110" to_dmx="114" />
+						<ChannelSet name="8000Hz" from_dmx="115" to_dmx="119" />
+						<ChannelSet name="16000Hz" from_dmx="120" to_dmx="124" />
+						<ChannelSet name="24000Hz" from_dmx="125" to_dmx="129" />
+						<ChannelSet name="Fan automatic" from_dmx="140" to_dmx="144" />
+						<ChannelSet name="Silent fan" from_dmx="145" to_dmx="149" />
+						<ChannelSet name="Fan full on" from_dmx="150" to_dmx="154" />
+						<ChannelSet name="Red drift off" from_dmx="165" to_dmx="169" />
+						<ChannelSet name="Red drift on" from_dmx="170" to_dmx="174" />
+						<ChannelSet name="Pan reverse off" from_dmx="180" to_dmx="184" />
+						<ChannelSet name="Pan reverse on" from_dmx="185" to_dmx="189" />
+						<ChannelSet name="Pan error correction off" from_dmx="190" to_dmx="194" />
+						<ChannelSet name="Pan error correction on" from_dmx="195" to_dmx="199" />
+						<ChannelSet name="Tilt reverse off" from_dmx="200" to_dmx="204" />
+						<ChannelSet name="Tilt reverse on" from_dmx="205" to_dmx="209" />
+						<ChannelSet name="Tilt error correction off" from_dmx="210" to_dmx="214" />
+						<ChannelSet name="Tilt error correction on" from_dmx="215" to_dmx="219" />
+						<ChannelSet name="Pan and Tilt reset" from_dmx="220" to_dmx="224" />
+						<ChannelSet name="Zoom reset" from_dmx="225" to_dmx="229" />
+						<ChannelSet name="Reset all" from_dmx="230" to_dmx="234" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH39  Working mode -->
+				<ChannelType attribute="MODE" feature="CONTROL" preset="CONTROL" coarse="39">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="MODE" attribute="MODE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="DMX mode" from_dmx="0" to_dmx="15" />
+						<ChannelSet name="Mixed mode (pixel)" from_dmx="16" to_dmx="238" />
+						<ChannelSet name="ArtNet mode" from_dmx="239" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+			</Module>
+		</Modules>
+		<Instances>
+			<Instance module_index="0" patch="1" locked="true" />
+		</Instances>
+		<Wheels />
+	</FixtureType>
+</MA>
