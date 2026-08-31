@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
+	<FixtureType name="RGBW Atomizer 17CH" mode="17">
+		<InfoItems>
+			<Info type="Revision" date="2026-08-31">RGBW effect fixture with background LED and atomizer, 17CH mode, built from manufacturer DMX chart</Info>
+		</InfoItems>
+		<short_name>RGBW17</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules>
+			<Module name="Main Module" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="3000">
+
+				<!-- CH1  Dimming -->
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH2  RGB strobe -->
+				<ChannelType attribute="RGB_STROBE" feature="BEAM" preset="BEAM" coarse="2">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGB_STROBE" attribute="RGB_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH3  Red -->
+				<ChannelType attribute="COLORRGB1" feature="COLOR" preset="COLOR" coarse="3">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH4  Green -->
+				<ChannelType attribute="COLORRGB2" feature="COLOR" preset="COLOR" coarse="4">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH5  Blue -->
+				<ChannelType attribute="COLORRGB3" feature="COLOR" preset="COLOR" coarse="5">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH6  RGB mode -->
+				<ChannelType attribute="RGB_MODE" feature="CONTROL" preset="CONTROL" coarse="6">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGB_MODE" attribute="RGB_MODE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="RGB mode" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH7  RGB speed -->
+				<ChannelType attribute="RGB_SPEED" feature="CONTROL" preset="CONTROL" coarse="7">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGB_SPEED" attribute="RGB_SPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Slow..fast" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH8  W strobe -->
+				<ChannelType attribute="W_STROBE" feature="BEAM" preset="BEAM" coarse="8">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W_STROBE" attribute="W_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH9  White -->
+				<ChannelType attribute="COLORRGB4" feature="COLOR" preset="COLOR" coarse="9">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+
+				<!-- CH10  W mode -->
+				<ChannelType attribute="W_MODE" feature="CONTROL" preset="CONTROL" coarse="10">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W_MODE" attribute="W_MODE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="W mode" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH11  W speed -->
+				<ChannelType attribute="W_SPEED" feature="CONTROL" preset="CONTROL" coarse="11">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W_SPEED" attribute="W_SPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Slow..fast" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH12  RGBW strobe -->
+				<ChannelType attribute="RGBW_STROBE" feature="BEAM" preset="BEAM" coarse="12">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGBW_STROBE" attribute="RGBW_STROBE" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH13  RGBW mode -->
+				<ChannelType attribute="RGBW_MODE" feature="CONTROL" preset="CONTROL" coarse="13">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGBW_MODE" attribute="RGBW_MODE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="RGBW mode" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH14  RGBW speed -->
+				<ChannelType attribute="RGBW_SPEED" feature="CONTROL" preset="CONTROL" coarse="14">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="RGBW_SPEED" attribute="RGBW_SPEED" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Slow..fast" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH15  Background colour -->
+				<ChannelType attribute="BG_COLOR" feature="COLOR" preset="COLOR" coarse="15">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="BG_COLOR" attribute="BG_COLOR" feature="COLOR" preset="COLOR">
+						<ChannelSet name="Background colour" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH16  Background dimming -->
+				<ChannelType attribute="BG_DIM" feature="DIMMER" preset="DIMMER" coarse="16" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="BG_DIM" attribute="BG_DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+				<!-- CH17  Atomization (fog / spray output) -->
+				<ChannelType attribute="ATOMIZE" feature="CONTROL" preset="CONTROL" coarse="17">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="ATOMIZE" attribute="ATOMIZE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Atomize low..high" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+
+			</Module>
+		</Modules>
+		<Instances>
+			<Instance module_index="0" patch="1" locked="true" />
+		</Instances>
+		<Wheels />
+	</FixtureType>
+</MA>
