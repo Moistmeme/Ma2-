@@ -5,7 +5,18 @@ These are GDTF re-creations of the two MA2 profiles.
 
 - `Laser_Moving_Head_29CH.gdtf` — 29-channel laser moving head (footprint 29)
 - `Moving_Head_39CH.gdtf` — RGB+L moving head with inner/outer Aura rings (footprint 39)
-- `build_gdtf.py` — generator/source for both (edit + re-run to regenerate)
+- `Pixel_Batten_117CH.gdtf` — 117-channel pixel batten, a real GDTF matrix (footprint 117)
+- `build_gdtf.py` / `build_gdtf_pixel.py` — generators/source (edit + re-run to regenerate)
+
+## Pixel Batten 117CH — matrix fixture
+
+5 master channels (Dimmer, Strobe duration, Strobe rate, Strobe, Atomization/diffuse) + **32 RGB
+pixels** (ch 6–101) + **16 White pixels** (ch 102–117), built as a true GDTF matrix using
+`GeometryReference`/`Break`. In grandMA3 it patches as **48 individually controllable pixels** — each
+RGB pixel has its own colour picker, and the batten works with MA3's matrix/pixel-mapper and layout
+tools. The RGB pixel and White pixel are each defined once and replicated at the correct DMX offsets
+(RGB every 3 channels, White every 1), so the whole 117-channel footprint is contiguous with no
+overlaps. The master Dimmer/Strobe are physical channels the fixture applies to all pixels internally.
 
 Both are GDTF **DataVersion 1.1**, one `DMXMode` each, with a Base→Yoke→Head→Beam geometry tree
 so Pan/Tilt drive the axes in the 3D view.
