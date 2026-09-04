@@ -4,10 +4,10 @@ import xml.etree.ElementTree as ET, zipfile
 from xml.sax.saxutils import escape
 
 def C(attr, pretty, feature, unit="None", nbytes=1, geo="Beam",
-      act=None, color=None, main=None, sets=None, pfrom=None, pto=None):
+      act=None, color=None, main=None, sets=None, pfrom=None, pto=None, default=None):
     return dict(attr=attr, pretty=pretty, feature=feature, unit=unit, nbytes=nbytes,
                 geo=geo, act=act, color=color, main=main, sets=sets or [],
-                pfrom=pfrom, pto=pto)
+                pfrom=pfrom, pto=pto, default=default)
 
 CH = [
     C("Pan","P","Position.PanTilt","Angle",2,"Yoke","PanTilt",pfrom=-270,pto=270),
@@ -18,7 +18,7 @@ CH = [
     C("ColorSub_Y","Y","Color.RGB","ColorComponent",1,"Beam","ColorRGB"),
     C("CTO","CTO","Color.Color","Temperature",1,"Beam",sets=[(0,"0..100%")]),
     C("CRI","CRI","Color.Color","None",1,"Beam",sets=[(0,"CRI filter out"),(128,"CRI filter in")]),
-    C("Color1","Col Wheel","Color.Color","None",2,"Beam","ColorRGB",sets=[
+    C("Color1","Col Wheel","Color.Color","None",2,"Beam","ColorRGB",default="0/2",sets=[
         (0,"White"),(6,"Indexing"),(116,"White"),(121,"Colour 1"),(131,"Colour 2"),
         (141,"Colour 3"),(151,"Colour 4"),(161,"Colour 5"),(171,"White"),
         (193,"CCW fast..slow"),(224,"Stop"),(225,"CW slow..fast")]),
@@ -37,7 +37,7 @@ CH = [
     C("Gobo2Pos","Patt FX","Gobo.Gobo","Angle",1,"Beam",sets=[
         (0,"Effect cut out"),(7,"Index 0-360"),(64,"CCW fast..slow"),(127,"Stop"),
         (129,"CW slow..fast"),(192,"Back-and-forth slow..fast")]),
-    C("Iris","Iris","Beam.Beam","None",2,"Beam",sets=[
+    C("Iris","Iris","Beam.Beam","None",2,"Beam",default="0/2",sets=[
         (0,"Large..small"),(226,"Slow open fast close"),(236,"Slow close fast open"),
         (246,"Slow close slow open")]),
     C("Prism1","Prism1","Beam.Beam","None",1,"Beam",sets=[(0,"Out"),(8,"In")]),
@@ -49,10 +49,10 @@ CH = [
     C("Frost1","Frost","Beam.Beam","None",1,"Beam",sets=[(0,"Off"),(128,"On")]),
     C("Zoom","Zoom","Focus.Focus","Angle",2,"Beam",sets=[(0,"Wide..narrow")]),
     C("Focus1","Focus","Focus.Focus","None",2,"Beam",sets=[(0,"0..100%")]),
-    C("Shutter1Strobe","Strobe","Beam.Beam","Frequency",1,"Beam",main="Shutter1",sets=[
+    C("Shutter1Strobe","Strobe","Beam.Beam","Frequency",1,"Beam",main="Shutter1",default="255/1",sets=[
         (0,"Closed"),(4,"Sync strobe"),(100,"Pulse strobe"),(150,"Flash strobe"),
         (200,"Random strobe"),(250,"Open")]),
-    C("Dimmer","Dim","Dimmer.Dimmer","LuminousIntensity",2,"Beam"),
+    C("Dimmer","Dim","Dimmer.Dimmer","LuminousIntensity",2,"Beam",default="0/2"),
     C("BladeRot","Blade Rot","Shapers.Shapers","Angle",2,"Beam",sets=[(0,"0-180 deg")]),
     C("Blade1A","Blade Up A","Shapers.Shapers","None",1,"Beam"),
     C("Blade1B","Blade Up B","Shapers.Shapers","None",1,"Beam"),
@@ -132,6 +132,7 @@ offset=1
 for c in CH:
     if c["nbytes"]==2: off=f"{offset},{offset+1}"; default="32768/2"; offset+=2
     else: off=f"{offset}"; default="0/1"; offset+=1
+    if c["default"]: default=c["default"]
     L.append('          <DMXChannel '+A(DMXBreak="1",Offset=off,Default=default,Geometry=c["geo"])+'>')
     L.append(f'            <LogicalChannel Attribute="{c["attr"]}">')
     cf=dict(Attribute=c["attr"],Name=c["attr"]+" 1",DMXFrom="0/1",Default=default)
