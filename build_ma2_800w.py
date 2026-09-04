@@ -82,11 +82,11 @@ L=['<?xml version="1.0" encoding="utf-8"?>']
 L.append('<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" '
          'xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" '
          'major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">')
-L.append('\t<FixtureType name="Moving Head 800W 42CH" mode="42">')
-L.append('\t\t<InfoItems><Info type="Revision" date="2026-09-04">800W CMY framing spot, 42CH mode</Info></InfoItems>')
-L.append('\t\t<short_name>MH800</short_name>')
-L.append('\t\t<manufacturer>Generic</manufacturer>')
-L.append('\t\t<short_manufacturer>Generic</short_manufacturer>')
+L.append('\t<FixtureType name="Nwgroup 800W" mode="42">')
+L.append('\t\t<InfoItems><Info type="Revision" date="2026-09-04">Nwgroup 800W CMY framing spot, 42CH mode</Info></InfoItems>')
+L.append('\t\t<short_name>NWG800</short_name>')
+L.append('\t\t<manufacturer>NW Group</manufacturer>')
+L.append('\t\t<short_manufacturer>NW Group</short_manufacturer>')
 L.append('\t\t<Modules>')
 L.append('\t\t\t<Module name="Main Module" class="Head" beamtype="Spot" beam_angle="18" beam_intensity="35000">')
 off=1
@@ -118,5 +118,5 @@ xml="\n".join(L)
 ET.fromstring(xml)
 fp=off-1
 assert fp==42, fp
-open("Moving_Head_800W_42CH.xml","w",encoding="utf-8").write(xml+"\n")
-print(f"Moving_Head_800W_42CH.xml written; ChannelTypes={len(CH)} footprint={fp}")
+open("Nwgroup_800W_42CH.xml","w",encoding="utf-8").write(xml+"\n")
+print(f"Nwgroup_800W_42CH.xml written; ChannelTypes={len(CH)} footprint={fp}")

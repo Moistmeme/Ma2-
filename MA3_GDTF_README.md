@@ -6,10 +6,10 @@ These are GDTF re-creations of the two MA2 profiles.
 - `Laser_Moving_Head_29CH.gdtf` — 29-channel laser moving head (footprint 29)
 - `Moving_Head_39CH.gdtf` — RGB+L moving head with inner/outer Aura rings (footprint 39)
 - `Pixel_Batten_117CH.gdtf` — 117-channel pixel batten, a real GDTF matrix (footprint 117)
-- `Moving_Head_800W_42CH.gdtf` — 800W CMY framing spot, 42-channel mode (footprint 42)
+- `Nwgroup_800W_42CH.gdtf` — 800W CMY framing spot, 42-channel mode (footprint 42)
 - `build_gdtf.py` / `build_gdtf_pixel.py` / `build_gdtf_800w.py` — generators/source (edit + re-run to regenerate)
 
-## Moving Head 800W 42CH — CMY framing spot
+## Nwgroup 800W — CMY framing spot
 
 Full-feature spot: 16-bit Pan/Tilt, **CMY + CTO + CRI**, colour wheel (16-bit), a rotating gobo wheel
 (+16-bit rotate) and a fixed pattern wheel (+effect rotate), **2 prisms** with rotation, frost, 16-bit

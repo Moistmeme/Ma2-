@@ -83,9 +83,9 @@ POS=("{1.000000,0.000000,0.000000,0.000000}{0.000000,1.000000,0.000000,0.000000}
      "{0.000000,0.000000,1.000000,%s}{0.000000,0.000000,0.000000,1.000000}")
 
 L=['<?xml version="1.0" encoding="UTF-8"?>','<GDTF DataVersion="1.1">']
-L.append('  <FixtureType '+A(Name="Moving Head 800W 42CH",ShortName="MH800",
-    LongName="800W CMY Framing Spot 42CH",Description="800W CMY framing spot moving head, 42CH mode",
-    Manufacturer="Generic",FixtureTypeID="6A1B2C3D-0000-4000-8000-000000000042")+'>')
+L.append('  <FixtureType '+A(Name="Nwgroup 800W",ShortName="NWG800",
+    LongName="Nwgroup 800W CMY Framing Spot 42CH",Description="Nwgroup 800W CMY framing spot moving head, 42CH mode",
+    Manufacturer="NW Group",FixtureTypeID="6A1B2C3D-0000-4000-8000-000000000042")+'>')
 L.append('    <AttributeDefinitions>')
 L.append('      <ActivationGroups>')
 for a in ["PanTilt","ColorRGB","Gobo"]: L.append(f'        <ActivationGroup Name="{a}"/>')
@@ -155,6 +155,6 @@ xml="\n".join(L)
 ET.fromstring(xml)
 fp=offset-1
 assert fp==42,fp
-with zipfile.ZipFile("Moving_Head_800W_42CH.gdtf","w",zipfile.ZIP_DEFLATED) as z:
+with zipfile.ZipFile("Nwgroup_800W_42CH.gdtf","w",zipfile.ZIP_DEFLATED) as z:
     z.writestr("description.xml",xml)
-print(f"Moving_Head_800W_42CH.gdtf written; logical channels={len(CH)} footprint={fp}")
+print(f"Nwgroup_800W_42CH.gdtf written; logical channels={len(CH)} footprint={fp}")
