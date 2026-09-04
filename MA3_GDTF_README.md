@@ -6,7 +6,17 @@ These are GDTF re-creations of the two MA2 profiles.
 - `Laser_Moving_Head_29CH.gdtf` — 29-channel laser moving head (footprint 29)
 - `Moving_Head_39CH.gdtf` — RGB+L moving head with inner/outer Aura rings (footprint 39)
 - `Pixel_Batten_117CH.gdtf` — 117-channel pixel batten, a real GDTF matrix (footprint 117)
-- `build_gdtf.py` / `build_gdtf_pixel.py` — generators/source (edit + re-run to regenerate)
+- `Moving_Head_800W_42CH.gdtf` — 800W CMY framing spot, 42-channel mode (footprint 42)
+- `build_gdtf.py` / `build_gdtf_pixel.py` / `build_gdtf_800w.py` — generators/source (edit + re-run to regenerate)
+
+## Moving Head 800W 42CH — CMY framing spot
+
+Full-feature spot: 16-bit Pan/Tilt, **CMY + CTO + CRI**, colour wheel (16-bit), a rotating gobo wheel
+(+16-bit rotate) and a fixed pattern wheel (+effect rotate), **2 prisms** with rotation, frost, 16-bit
+zoom/focus/iris, strobe, 16-bit dimmer, a **4-blade framing system** (`Blade1-4 A/B` under a Shapers
+feature group, plus 16-bit blade rotation) and a macro/control channel. CMY maps to GDTF `ColorSub_C/M/Y`,
+gobos to `Gobo1/Gobo2` (+`Pos`), prisms to `Prism1/2` (+`Pos`), framing to the standard `Blade*`
+attributes — so MA3's colour, gobo, prism and shaper controls all light up correctly.
 
 ## Pixel Batten 117CH — matrix fixture
 
