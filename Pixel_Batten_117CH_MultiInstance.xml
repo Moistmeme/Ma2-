@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
+	<FixtureType name="Pixel Batten 117CH Pixels" mode="117">
+		<InfoItems><Info type="Revision" date="2026-09-10">Pixel batten, multi-instance: 5 master + 32 RGB pixels + 16 White pixels</Info></InfoItems>
+		<short_name>PIX117M</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules>
+			<Module name="Master" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="8000">
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" />
+				</ChannelType>
+				<ChannelType attribute="STRB_DUR" feature="BEAM" preset="BEAM" coarse="2">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="STRB_DUR" attribute="STRB_DUR" feature="BEAM" preset="BEAM" />
+				</ChannelType>
+				<ChannelType attribute="STRB_RATE" feature="BEAM" preset="BEAM" coarse="3">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="STRB_RATE" attribute="STRB_RATE" feature="BEAM" preset="BEAM" />
+				</ChannelType>
+				<ChannelType attribute="SHUTTER" feature="BEAM" preset="BEAM" coarse="4">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="SHUTTER" attribute="SHUTTER" feature="BEAM" preset="BEAM" />
+				</ChannelType>
+				<ChannelType attribute="ATOMIZE" feature="CONTROL" preset="CONTROL" coarse="5">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="ATOMIZE" attribute="ATOMIZE" feature="CONTROL" preset="CONTROL" />
+				</ChannelType>
+			</Module>
+			<Module name="RGB Pixel" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="200">
+				<ChannelType attribute="COLORRGB1" feature="COLOR" preset="COLOR" coarse="1">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="COLORRGB2" feature="COLOR" preset="COLOR" coarse="2">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="COLORRGB3" feature="COLOR" preset="COLOR" coarse="3">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+			</Module>
+			<Module name="White Pixel" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="200">
+				<ChannelType attribute="COLORRGB4" feature="COLOR" preset="COLOR" coarse="1">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances>
+			<Instance module_index="0" patch="1" locked="true" name="Master" />
+			<Instance module_index="1" patch="6" name="Pixel 1" />
+			<Instance module_index="1" patch="9" name="Pixel 2" />
+			<Instance module_index="1" patch="12" name="Pixel 3" />
+			<Instance module_index="1" patch="15" name="Pixel 4" />
+			<Instance module_index="1" patch="18" name="Pixel 5" />
+			<Instance module_index="1" patch="21" name="Pixel 6" />
+			<Instance module_index="1" patch="24" name="Pixel 7" />
+			<Instance module_index="1" patch="27" name="Pixel 8" />
+			<Instance module_index="1" patch="30" name="Pixel 9" />
+			<Instance module_index="1" patch="33" name="Pixel 10" />
+			<Instance module_index="1" patch="36" name="Pixel 11" />
+			<Instance module_index="1" patch="39" name="Pixel 12" />
+			<Instance module_index="1" patch="42" name="Pixel 13" />
+			<Instance module_index="1" patch="45" name="Pixel 14" />
+			<Instance module_index="1" patch="48" name="Pixel 15" />
+			<Instance module_index="1" patch="51" name="Pixel 16" />
+			<Instance module_index="1" patch="54" name="Pixel 17" />
+			<Instance module_index="1" patch="57" name="Pixel 18" />
+			<Instance module_index="1" patch="60" name="Pixel 19" />
+			<Instance module_index="1" patch="63" name="Pixel 20" />
+			<Instance module_index="1" patch="66" name="Pixel 21" />
+			<Instance module_index="1" patch="69" name="Pixel 22" />
+			<Instance module_index="1" patch="72" name="Pixel 23" />
+			<Instance module_index="1" patch="75" name="Pixel 24" />
+			<Instance module_index="1" patch="78" name="Pixel 25" />
+			<Instance module_index="1" patch="81" name="Pixel 26" />
+			<Instance module_index="1" patch="84" name="Pixel 27" />
+			<Instance module_index="1" patch="87" name="Pixel 28" />
+			<Instance module_index="1" patch="90" name="Pixel 29" />
+			<Instance module_index="1" patch="93" name="Pixel 30" />
+			<Instance module_index="1" patch="96" name="Pixel 31" />
+			<Instance module_index="1" patch="99" name="Pixel 32" />
+			<Instance module_index="2" patch="102" name="White 1" />
+			<Instance module_index="2" patch="103" name="White 2" />
+			<Instance module_index="2" patch="104" name="White 3" />
+			<Instance module_index="2" patch="105" name="White 4" />
+			<Instance module_index="2" patch="106" name="White 5" />
+			<Instance module_index="2" patch="107" name="White 6" />
+			<Instance module_index="2" patch="108" name="White 7" />
+			<Instance module_index="2" patch="109" name="White 8" />
+			<Instance module_index="2" patch="110" name="White 9" />
+			<Instance module_index="2" patch="111" name="White 10" />
+			<Instance module_index="2" patch="112" name="White 11" />
+			<Instance module_index="2" patch="113" name="White 12" />
+			<Instance module_index="2" patch="114" name="White 13" />
+			<Instance module_index="2" patch="115" name="White 14" />
+			<Instance module_index="2" patch="116" name="White 15" />
+			<Instance module_index="2" patch="117" name="White 16" />
+		</Instances>
+		<Wheels />
+	</FixtureType>
+</MA>
