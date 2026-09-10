@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123" xmlns="http://schemas.malighting.de/grandma2/xml/MA">
+	<FixtureType name="Pixel Batten 117CH" mode="117">
+		<InfoItems><Info type="Revision" date="2026-09-10">Pixel batten: master + 32 RGB pixels + 16 White pixels, 117CH mode</Info></InfoItems>
+		<short_name>PIX117</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules>
+			<Module name="Main Module" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="8000">
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="0..100%" from_dmx="0" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="STRB_DUR" feature="BEAM" preset="BEAM" coarse="2">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="STRB_DUR" attribute="STRB_DUR" feature="BEAM" preset="BEAM" />
+				</ChannelType>
+				<ChannelType attribute="STRB_RATE" feature="BEAM" preset="BEAM" coarse="3">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="STRB_RATE" attribute="STRB_RATE" feature="BEAM" preset="BEAM" />
+				</ChannelType>
+				<ChannelType attribute="SHUTTER" feature="BEAM" preset="BEAM" coarse="4">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="SHUTTER" attribute="SHUTTER" feature="BEAM" preset="BEAM">
+						<ChannelSet name="Open" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Strobe slow..fast" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="ATOMIZE" feature="CONTROL" preset="CONTROL" coarse="5">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="ATOMIZE" attribute="ATOMIZE" feature="CONTROL" preset="CONTROL">
+						<ChannelSet name="Off" from_dmx="0" to_dmx="0" />
+						<ChannelSet name="Diffuse low..high" from_dmx="1" to_dmx="255" />
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="P01R" feature="COLOR" preset="COLOR" coarse="6">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P01R" attribute="P01R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P01G" feature="COLOR" preset="COLOR" coarse="7">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P01G" attribute="P01G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P01B" feature="COLOR" preset="COLOR" coarse="8">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P01B" attribute="P01B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P02R" feature="COLOR" preset="COLOR" coarse="9">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P02R" attribute="P02R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P02G" feature="COLOR" preset="COLOR" coarse="10">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P02G" attribute="P02G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P02B" feature="COLOR" preset="COLOR" coarse="11">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P02B" attribute="P02B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P03R" feature="COLOR" preset="COLOR" coarse="12">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P03R" attribute="P03R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P03G" feature="COLOR" preset="COLOR" coarse="13">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P03G" attribute="P03G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P03B" feature="COLOR" preset="COLOR" coarse="14">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P03B" attribute="P03B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P04R" feature="COLOR" preset="COLOR" coarse="15">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P04R" attribute="P04R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P04G" feature="COLOR" preset="COLOR" coarse="16">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P04G" attribute="P04G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P04B" feature="COLOR" preset="COLOR" coarse="17">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P04B" attribute="P04B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P05R" feature="COLOR" preset="COLOR" coarse="18">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P05R" attribute="P05R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P05G" feature="COLOR" preset="COLOR" coarse="19">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P05G" attribute="P05G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P05B" feature="COLOR" preset="COLOR" coarse="20">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P05B" attribute="P05B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P06R" feature="COLOR" preset="COLOR" coarse="21">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P06R" attribute="P06R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P06G" feature="COLOR" preset="COLOR" coarse="22">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P06G" attribute="P06G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P06B" feature="COLOR" preset="COLOR" coarse="23">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P06B" attribute="P06B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P07R" feature="COLOR" preset="COLOR" coarse="24">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P07R" attribute="P07R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P07G" feature="COLOR" preset="COLOR" coarse="25">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P07G" attribute="P07G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P07B" feature="COLOR" preset="COLOR" coarse="26">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P07B" attribute="P07B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P08R" feature="COLOR" preset="COLOR" coarse="27">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P08R" attribute="P08R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P08G" feature="COLOR" preset="COLOR" coarse="28">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P08G" attribute="P08G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P08B" feature="COLOR" preset="COLOR" coarse="29">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P08B" attribute="P08B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P09R" feature="COLOR" preset="COLOR" coarse="30">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P09R" attribute="P09R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P09G" feature="COLOR" preset="COLOR" coarse="31">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P09G" attribute="P09G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P09B" feature="COLOR" preset="COLOR" coarse="32">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P09B" attribute="P09B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P10R" feature="COLOR" preset="COLOR" coarse="33">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P10R" attribute="P10R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P10G" feature="COLOR" preset="COLOR" coarse="34">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P10G" attribute="P10G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P10B" feature="COLOR" preset="COLOR" coarse="35">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P10B" attribute="P10B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P11R" feature="COLOR" preset="COLOR" coarse="36">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P11R" attribute="P11R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P11G" feature="COLOR" preset="COLOR" coarse="37">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P11G" attribute="P11G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P11B" feature="COLOR" preset="COLOR" coarse="38">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P11B" attribute="P11B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P12R" feature="COLOR" preset="COLOR" coarse="39">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P12R" attribute="P12R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P12G" feature="COLOR" preset="COLOR" coarse="40">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P12G" attribute="P12G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P12B" feature="COLOR" preset="COLOR" coarse="41">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P12B" attribute="P12B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P13R" feature="COLOR" preset="COLOR" coarse="42">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P13R" attribute="P13R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P13G" feature="COLOR" preset="COLOR" coarse="43">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P13G" attribute="P13G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P13B" feature="COLOR" preset="COLOR" coarse="44">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P13B" attribute="P13B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P14R" feature="COLOR" preset="COLOR" coarse="45">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P14R" attribute="P14R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P14G" feature="COLOR" preset="COLOR" coarse="46">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P14G" attribute="P14G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P14B" feature="COLOR" preset="COLOR" coarse="47">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P14B" attribute="P14B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P15R" feature="COLOR" preset="COLOR" coarse="48">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P15R" attribute="P15R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P15G" feature="COLOR" preset="COLOR" coarse="49">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P15G" attribute="P15G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P15B" feature="COLOR" preset="COLOR" coarse="50">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P15B" attribute="P15B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P16R" feature="COLOR" preset="COLOR" coarse="51">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P16R" attribute="P16R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P16G" feature="COLOR" preset="COLOR" coarse="52">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P16G" attribute="P16G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P16B" feature="COLOR" preset="COLOR" coarse="53">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P16B" attribute="P16B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P17R" feature="COLOR" preset="COLOR" coarse="54">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P17R" attribute="P17R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P17G" feature="COLOR" preset="COLOR" coarse="55">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P17G" attribute="P17G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P17B" feature="COLOR" preset="COLOR" coarse="56">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P17B" attribute="P17B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P18R" feature="COLOR" preset="COLOR" coarse="57">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P18R" attribute="P18R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P18G" feature="COLOR" preset="COLOR" coarse="58">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P18G" attribute="P18G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P18B" feature="COLOR" preset="COLOR" coarse="59">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P18B" attribute="P18B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P19R" feature="COLOR" preset="COLOR" coarse="60">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P19R" attribute="P19R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P19G" feature="COLOR" preset="COLOR" coarse="61">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P19G" attribute="P19G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P19B" feature="COLOR" preset="COLOR" coarse="62">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P19B" attribute="P19B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P20R" feature="COLOR" preset="COLOR" coarse="63">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P20R" attribute="P20R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P20G" feature="COLOR" preset="COLOR" coarse="64">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P20G" attribute="P20G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P20B" feature="COLOR" preset="COLOR" coarse="65">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P20B" attribute="P20B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P21R" feature="COLOR" preset="COLOR" coarse="66">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P21R" attribute="P21R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P21G" feature="COLOR" preset="COLOR" coarse="67">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P21G" attribute="P21G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P21B" feature="COLOR" preset="COLOR" coarse="68">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P21B" attribute="P21B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P22R" feature="COLOR" preset="COLOR" coarse="69">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P22R" attribute="P22R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P22G" feature="COLOR" preset="COLOR" coarse="70">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P22G" attribute="P22G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P22B" feature="COLOR" preset="COLOR" coarse="71">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P22B" attribute="P22B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P23R" feature="COLOR" preset="COLOR" coarse="72">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P23R" attribute="P23R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P23G" feature="COLOR" preset="COLOR" coarse="73">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P23G" attribute="P23G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P23B" feature="COLOR" preset="COLOR" coarse="74">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P23B" attribute="P23B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P24R" feature="COLOR" preset="COLOR" coarse="75">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P24R" attribute="P24R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P24G" feature="COLOR" preset="COLOR" coarse="76">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P24G" attribute="P24G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P24B" feature="COLOR" preset="COLOR" coarse="77">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P24B" attribute="P24B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P25R" feature="COLOR" preset="COLOR" coarse="78">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P25R" attribute="P25R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P25G" feature="COLOR" preset="COLOR" coarse="79">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P25G" attribute="P25G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P25B" feature="COLOR" preset="COLOR" coarse="80">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P25B" attribute="P25B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P26R" feature="COLOR" preset="COLOR" coarse="81">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P26R" attribute="P26R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P26G" feature="COLOR" preset="COLOR" coarse="82">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P26G" attribute="P26G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P26B" feature="COLOR" preset="COLOR" coarse="83">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P26B" attribute="P26B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P27R" feature="COLOR" preset="COLOR" coarse="84">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P27R" attribute="P27R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P27G" feature="COLOR" preset="COLOR" coarse="85">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P27G" attribute="P27G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P27B" feature="COLOR" preset="COLOR" coarse="86">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P27B" attribute="P27B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P28R" feature="COLOR" preset="COLOR" coarse="87">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P28R" attribute="P28R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P28G" feature="COLOR" preset="COLOR" coarse="88">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P28G" attribute="P28G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P28B" feature="COLOR" preset="COLOR" coarse="89">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P28B" attribute="P28B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P29R" feature="COLOR" preset="COLOR" coarse="90">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P29R" attribute="P29R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P29G" feature="COLOR" preset="COLOR" coarse="91">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P29G" attribute="P29G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P29B" feature="COLOR" preset="COLOR" coarse="92">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P29B" attribute="P29B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P30R" feature="COLOR" preset="COLOR" coarse="93">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P30R" attribute="P30R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P30G" feature="COLOR" preset="COLOR" coarse="94">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P30G" attribute="P30G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P30B" feature="COLOR" preset="COLOR" coarse="95">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P30B" attribute="P30B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P31R" feature="COLOR" preset="COLOR" coarse="96">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P31R" attribute="P31R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P31G" feature="COLOR" preset="COLOR" coarse="97">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P31G" attribute="P31G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P31B" feature="COLOR" preset="COLOR" coarse="98">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P31B" attribute="P31B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P32R" feature="COLOR" preset="COLOR" coarse="99">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P32R" attribute="P32R" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P32G" feature="COLOR" preset="COLOR" coarse="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P32G" attribute="P32G" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="P32B" feature="COLOR" preset="COLOR" coarse="101">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="P32B" attribute="P32B" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W01" feature="COLOR" preset="COLOR" coarse="102" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W01" attribute="W01" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W02" feature="COLOR" preset="COLOR" coarse="103" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W02" attribute="W02" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W03" feature="COLOR" preset="COLOR" coarse="104" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W03" attribute="W03" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W04" feature="COLOR" preset="COLOR" coarse="105" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W04" attribute="W04" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W05" feature="COLOR" preset="COLOR" coarse="106" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W05" attribute="W05" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W06" feature="COLOR" preset="COLOR" coarse="107" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W06" attribute="W06" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W07" feature="COLOR" preset="COLOR" coarse="108" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W07" attribute="W07" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W08" feature="COLOR" preset="COLOR" coarse="109" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W08" attribute="W08" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W09" feature="COLOR" preset="COLOR" coarse="110" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W09" attribute="W09" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W10" feature="COLOR" preset="COLOR" coarse="111" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W10" attribute="W10" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W11" feature="COLOR" preset="COLOR" coarse="112" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W11" attribute="W11" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W12" feature="COLOR" preset="COLOR" coarse="113" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W12" attribute="W12" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W13" feature="COLOR" preset="COLOR" coarse="114" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W13" attribute="W13" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W14" feature="COLOR" preset="COLOR" coarse="115" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W14" attribute="W14" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W15" feature="COLOR" preset="COLOR" coarse="116" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W15" attribute="W15" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+				<ChannelType attribute="W16" feature="COLOR" preset="COLOR" coarse="117" highlight_value="255">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="W16" attribute="W16" feature="COLOR" preset="COLOR" />
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances><Instance module_index="0" patch="1" locked="true" /></Instances>
+		<Wheels />
+	</FixtureType>
+</MA>
